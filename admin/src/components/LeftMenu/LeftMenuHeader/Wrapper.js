@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
 
 import Logo from '../../../assets/images/logo-won.svg';
 
