@@ -6,6 +6,7 @@
  */
 
 const axios = require("axios");
+const slugify = require("slugify");
 
 async function getGameInfo(slug) {
   const jsdom = require("jsdom");
@@ -34,8 +35,11 @@ module.exports = {
 
     const { data: { products } } = await axios.get(gogApiUrl)
 
-    console.log(products[14]);
+    await strapi.services.publisher.create({
+      name: products[14].publisher,
+      slug: slugify(products[14].publisher).toLowerCase()
+    })
 
-    console.log(await getGameInfo(products[14].slug))
+    // console.log(await getGameInfo(products[14].slug))
   }
 };
