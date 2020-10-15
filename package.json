@@ -2,7 +2,7 @@
   "name": "won-games-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "API do projeto Won Games feito com strapi",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
